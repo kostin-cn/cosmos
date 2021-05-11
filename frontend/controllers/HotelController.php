@@ -1146,4 +1146,14 @@ class HotelController extends FrontendController
             'brand_list' => $brand_list,
         ]);
     }
+
+    public function actionEvents($slug)
+    {
+        $hotel = [];
+        $brand_list = [];
+        return $this->render('events', [
+            'hotel' => $hotel,
+            'brand_list' => $brand_list,
+        ]);
+    }
 }
