@@ -1,0 +1,28 @@
+$black: #000000;
+$white: #FFFFFF;
+$gray: #E3E3E3;
+$gray2: #C4C4C4;
+$gray3: #D0CAC6;
+$gray4: #B3B3B3;
+$gray5: #F7F7F7;
+$dark: #555559;
+$darkText: #282E43;
+$gold: #A18474;
+$gold2: #725C50;
+$cyan:  #1AA5B6;
+$cyan2:  #0D525B;
+$green:  #94C756;
+$green2:  #4A632B;
+
+$mainFontSize: 16px;
+$mainFont: 'Circe', sans-serif;
+$extraFont: 'Circe', serif;
+$additionalFont: 'Circe', sans-serif;
+
+$mainColor: $black;
+$mainBgColor: #F4F4F4;
+
+// CSS переменные, которые меняются через JS
+:root {
+  --vh100: 100vh;
+}

@@ -1,0 +1,1878 @@
+@import "hotel-nav";
+
+.sectionDesc {
+  padding: 30px 0 75px;
+
+  .wrapper {
+    &.w820 {
+      p {
+        margin-bottom: 120px;
+      }
+    }
+  }
+
+  .descFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      display: flex;
+      align-items: center;
+
+      .spanIco {
+        margin-left: 8px;
+
+        &:first-child {
+          font-size: 18px;
+        }
+
+        &:last-child {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+
+  .divider {
+    background: $gold;
+  }
+}
+
+.body-site-hotel {
+  background-color: $white;
+
+  #mainNav {
+    display: none;
+  }
+}
+
+.page-hotel {
+  background-color: $white;
+
+  .hotelNav {
+    display: block;
+  }
+
+  .breadCrumbs {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 1.4;
+    color: $gray4;
+  }
+
+  .sectionTop {
+    .sliderContainer {
+      height: 100vh;
+    }
+
+    .bgImage {
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        @include grad(rgba(0, 0, 0, 0.5), transparent);
+      }
+    }
+
+    .hotelText {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      @include translate(-50%, -50%);
+      z-index: 2;
+
+      h3 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: normal;
+        line-height: 1.4;
+      }
+
+      h1 {
+        margin: 0 0 22px;
+        font-size: 100px;
+        font-weight: normal;
+        line-height: 0.9;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        margin: 0;
+        font-size: 32px;
+        font-weight: normal;
+        line-height: 36px;
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+
+  .sectionAttachments {
+    #attachSlider {
+      .slide {
+        height: 45vw;
+        width: 100%;
+        overflow: hidden;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    .attachArrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 50%;
+      color: $white;
+      @include translateY(-50%);
+      border: 1px solid $white;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &.prev {
+        left: 35px;
+      }
+
+      &.next {
+        right: 35px;
+      }
+
+      .icon-arrow {
+        font-size: 7.5px;
+      }
+    }
+  }
+
+  .sectionApartments {
+    padding-bottom: 45px;
+
+    .wrapper {
+      .itemsContainer {
+        padding-top: 50px;
+
+        .itemBlock {
+          &.imageBlock {
+            width: 47%;
+
+            .image {
+              .thisImg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: 2;
+                visibility: hidden;
+                opacity: 0;
+                @include transition();
+
+                &.active {
+                  visibility: visible;
+                  opacity: 1;
+                }
+              }
+            }
+          }
+
+          &.descBlock {
+            display: flex;
+            align-items: center;
+            width: 53%;
+            padding-left: 4vw;
+          }
+
+          .text {
+            padding-right: 3vw;
+
+            h3 {
+              margin-bottom: 27px;
+              //width: 55%;
+              max-width: 450px;
+              font-family: $mainFont;
+              font-size: 36px;
+              line-height: 1;
+              font-weight: 400;
+            }
+
+            p {
+              margin-bottom: 50px;
+              font-family: $mainFont;
+              font-size: 22px;
+              font-weight: 400;
+              color: $darkText;
+            }
+
+            ul {
+              font-family: $mainFont;
+              font-size: 22px;
+              font-weight: 700;
+              color: $gold;
+              width: 80%;
+
+              li {
+                list-style: none;
+
+                a {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  padding: 10px 0;
+                  border-bottom: 1px solid $gray2;
+
+                  .icon-arrow {
+                    font-size: 7.5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sectionAdventures {
+    color: $white;
+
+    .sliderContainer {
+      height: 56vw;
+
+      .wrapper {
+        height: 100%;
+      }
+
+      overflow: hidden;
+    }
+
+    .mobile-slider-container {
+      display: none;
+
+      .slide {
+        padding-top: 40px;
+
+        .slideContent {
+          padding-bottom: 62%;
+          overflow: hidden;
+        }
+
+        h3 {
+          position: absolute;
+          left: 20px;
+          bottom: 20px;
+        }
+      }
+
+      .advArrow {
+        color: $black;
+        display: inline-block;
+        margin: 0 6px;
+      }
+    }
+
+    .text {
+      width: 33%;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      @include translateY(-50%);
+      font-family: $mainFont;
+      font-size: 22px;
+      font-weight: 400;
+
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      a {
+        font-family: $mainFont;
+        font-size: 22px;
+        line-height: 1.5;
+        font-weight: 700;
+      }
+    }
+
+    .tns-outer {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 25%;
+
+      .slide {
+        padding-top: 40px;
+
+        .slideContent {
+          padding-bottom: 62%;
+          overflow: hidden;
+        }
+
+        h3 {
+          position: absolute;
+          left: 20px;
+          bottom: 20px;
+        }
+      }
+    }
+
+    .adventuresSlider-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 5%;
+      width: 5%;
+      position: absolute;
+      top: 50%;
+      right: 27%;
+      @include translateY(-50%);
+
+      .adventuresArrow {
+        font-size: 29px;
+        padding: 0 20px;
+        cursor: pointer;
+
+        &.next {
+          @include rotate(180deg);
+        }
+      }
+
+      .roundBlock {
+        flex-shrink: 0;
+
+        span {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .sectionPromo {
+    padding: 30px 0;
+
+    h2 {
+      margin-bottom: 30px;
+    }
+  }
+
+  .sectionRestaurant {
+    h2 {
+      margin-bottom: 60px;
+    }
+
+    .sliderContainer {
+      .tns-nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        position: absolute;
+        bottom: 35px;
+        left: 50.45%;
+        z-index: 2;
+        @include translateX(-50%);
+
+        button {
+          height: 14px;
+          width: 14px;
+          background: $gray;
+          border-radius: 50%;
+          padding: 0;
+          border: none;
+          margin: 0 6px;
+
+          &.tns-nav-active {
+            background: $gold;
+          }
+        }
+      }
+
+      #restaurantSlider {
+        height: 54vw;
+
+        .slider {
+          height: 38vw;
+          @include translateX(10%);
+
+          .slideText {
+            width: 90%;
+            max-width: 720px;
+            padding: 30px 45px 70px;
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            @include translate(-50%, -25%);
+            background: $white;
+            bottom: 1px solid $black;
+
+            h3 {
+              font-size: 36px;
+              line-height: 1;
+              font-weight: 400;
+              color: $black;
+              margin-bottom: 20px;
+            }
+
+            p {
+              font-size: 22px;
+              line-height: 1.4;
+              font-weight: 400;
+              color: $darkText;
+              margin-bottom: 15px;
+            }
+
+            .slideDesc {
+              height: 90px;
+              overflow: hidden;
+            }
+
+            .read-more {
+              font-size: 18px;
+              line-height: 1.5;
+              font-weight: 700;
+              color: $darkText;
+
+              &:before {
+                background-color: $darkText;
+              }
+            }
+
+            .itemsContainer {
+              display: flex;
+              justify-content: center;
+              margin-top: 20px;
+
+              .itemBlock {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                padding: 0 2%;
+
+                .ico {
+                  font-size: 36px;
+                  color: $gold;
+                }
+
+                p {
+                  color: $darkText;
+                  margin-bottom: 15px;
+                }
+
+                a {
+                  height: 65px;
+                  width: 215px;
+                  font-size: 18px;
+                  line-height: 1.6;
+                }
+              }
+            }
+          }
+
+          .bgImage {
+            padding: 0 15px;
+            overflow: hidden;
+          }
+        }
+      }
+
+      .restaurantArrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        top: 64%;
+        color: $white;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $white;
+        border-radius: 50%;
+        cursor: pointer;
+
+        span {
+          font-size: 7.5px;
+        }
+
+        &.prev {
+          @include translateX(-440px);
+        }
+
+        &.next {
+          @include translateX(394px);
+        }
+      }
+    }
+
+    .linkToAll {
+      right: 3%;
+    }
+  }
+
+  .sectionEvents {
+    .linkToAll {
+      right: 3%;
+    }
+
+    .sectionTitle {
+      margin-bottom: 60px;
+    }
+
+    .itemsContainer {
+      .itemBlock {
+        .itemText {
+          h3 {
+            font-family: $mainFont;
+            font-size: 36px;
+            line-height: 1;
+            color: $black;
+            margin-top: 0;
+            margin-bottom: 20px;
+          }
+
+          .itemPrice {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 22px;
+            color: $gold;
+          }
+
+          .read-more {
+            font-size: 18px;
+            line-height: 1.3;
+            color: $darkText;
+
+            &:before {
+              background-color: $darkText;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sectionRecreation {
+    overflow: hidden;
+
+    .wrapper {
+      &.w720 {
+        margin-bottom: 100px;
+
+        .sectionTitle {
+          margin-bottom: 35px;
+        }
+
+        p {
+          font-size: 22px;
+          line-height: 1.4;
+          font-weight: 400;
+          color: $darkText;
+        }
+      }
+    }
+
+    .advantCategories {
+      width: 90%;
+      margin: 0 auto 35px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 36px;
+      line-height: 1;
+      font-weight: 400;
+      color: $gray2;
+
+      .catLink {
+        cursor: pointer;
+        flex: 0 0 auto;
+        width: max-content;
+        margin: 10px 2vw;
+        @include transition();
+
+        &.active, &:hover {
+          color: $black;
+        }
+      }
+    }
+
+    .sliderContainer {
+      overflow: hidden;
+    }
+
+    .advantagesSlider {
+      height: 48vw;
+
+      .slide {
+        height: 38vw;
+        width: 100%;
+
+        .slideText {
+          padding: 4% 5%;
+          width: 90%;
+          max-width: 720px;
+          background: $white;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          @include translate(-50%, -50%);
+
+          p {
+            margin-bottom: 25px;
+            font-size: $mainFont;
+            font-size: 22px;
+            line-height: 1.3;
+            font-weight: 400;
+            color: $darkText;
+
+            strong {
+              font-weight: 700;
+            }
+          }
+
+          .read-more {
+            font-size: 18px;
+            line-height: 1.6;
+            font-weight: 700;
+            color: $darkText;
+
+            &:before {
+              background-color: $darkText;
+            }
+          }
+        }
+      }
+    }
+
+    .advantagesArrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      color: $white;
+      width: 50px;
+      height: 50px;
+      border: 1px solid $white;
+      border-radius: 50%;
+      cursor: pointer;
+
+      span {
+        font-size: 7.5px;
+      }
+
+      &.prev {
+        @include translateX(-440px);
+      }
+
+      &.next {
+        @include translateX(390px);
+      }
+    }
+  }
+
+  .sectionActivities {
+    padding: 80px;
+
+    .wrapper {
+      .sectionTitle {
+        margin-bottom: 35px;
+      }
+
+      p {
+        margin-bottom: 60px;
+        font-size: 22px;
+        color: $darkText;
+      }
+
+      .itemsContainer {
+        display: flex;
+        justify-content: center;
+
+        .itemBlock {
+          margin-left: 47px;
+          display: flex;
+          align-items: center;
+
+          .spanIco {
+            font-size: 55px;
+            color: $gold;
+          }
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          span {
+            &:last-child {
+              margin-left: 15px;
+              padding-bottom: 1px;
+              font-size: 22px;
+              color: $black;
+              border-bottom: 1px solid $black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sectionAdvantages {
+    .sectionTitle {
+      margin-bottom: 55px;
+    }
+  }
+
+  .sectionTravel {
+    height: 41vw;
+    overflow: hidden;
+
+    .bgImage {
+      height: 100vh;
+    }
+
+    .sectionText {
+      width: 90%;
+      max-width: 450px;
+      position: absolute;
+      top: 7%;
+      left: 5%;
+      color: $white;
+
+      h2 {
+        font-size: 70px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        letter-spacing: -0.06em;
+      }
+
+      p {
+        font-size: 32px;
+        margin-bottom: 35px;
+        letter-spacing: -0.06em;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        padding-bottom: 30px;
+        font-size: 22px;
+        line-height: 1.5;
+        border-bottom: 4px solid $white;
+
+        .spanIco {
+          font-size: 7.5px;
+        }
+      }
+    }
+  }
+
+  .sectionAwards {
+    padding: 40px 0 0;
+
+    .sectionTitle {
+      margin-bottom: 65px;
+    }
+
+    .spanArrow {
+      display: inline-block;
+      margin: 0 6px 30px;
+    }
+
+    .itemsContainer {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      .itemBlock {
+        padding: 0 10px;
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        .image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          //height: 15vw;
+          //min-height: 220px;
+          margin-bottom: 20px;
+
+          .nullAward {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span {
+              font-size: 22px;
+              font-weight: 700;
+              text-transform: uppercase;
+
+              &.spanIco {
+                font-size: 80px;
+                font-weight: normal;
+                margin-bottom: 12px;
+              }
+            }
+          }
+
+          &.nonImg {
+            //background: $gold;
+            color: $gold;
+          }
+        }
+
+        .itemText {
+          padding: 0 5%;
+          //padding-right: 10%;
+          font-size: 22px;
+          color: $darkText;
+
+          .itemTitle {
+            font-weight: 700;
+            font-size: 22px;
+          }
+        }
+
+      }
+    }
+  }
+
+  .sectionContacts {
+    padding-bottom: 100px;
+
+    .wrapper {
+      &.w620 {
+        .sectionTitle {
+          margin-bottom: 40px;
+        }
+
+        p {
+          margin-bottom: 60px;
+          font-size: 22px;
+          color: $darkText;
+        }
+      }
+    }
+
+    .itemsContainer {
+      justify-content: space-between;
+
+      .itemBlock {
+        width: 47.5%;
+
+        .accordeon {
+          list-style: none;
+          border-top: 1px solid $gold;
+
+          li {
+            padding: 20px 0;
+            border-bottom: 1px solid $gold;
+
+            .liHead {
+              display: flex;
+              justify-content: space-between;
+              padding-right: 5px;
+              font-size: 22px;
+              color: $black;
+              cursor: pointer;
+
+              .spanIco {
+                font-size: 24px;
+                color: $gold;
+                @include transition();
+                @include rotateX(180deg);
+              }
+
+              &.active {
+                .spanIco {
+                  @include rotateX(0);
+                }
+              }
+            }
+
+            .liBody {
+              max-height: 0;
+              overflow: hidden;
+              @include transition();
+
+              p {
+                padding-right: 5%;
+                font-size: 22px;
+                color: $darkText;
+                margin: 0;
+
+                &.stronk {
+                  text-transform: capitalize;
+                  padding-top: 30px;
+                  font-weight: 700;
+                  margin-bottom: 0;
+                }
+              }
+
+              .email {
+                text-decoration: underline;
+              }
+
+              &.active {
+                max-height: 500px;
+
+                p {
+                  &.stronk {
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #map {
+      //height: 35vw;
+      height: 630px;
+
+      filter: grayscale(1);
+      -ms-filter: grayscale(1);
+      -webkit-filter: grayscale(1);
+      -moz-filter: grayscale(1);
+      -o-filter: grayscale(1);
+
+      .ymaps-2-1-78-copyright__content-cell {
+        display: none;
+      }
+
+      .mapPlacemark {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: $black;
+        color: $white;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 6px;
+        line-height: 1;
+
+        img {
+          width: 40px;
+          height: auto;
+        }
+        p {
+          margin: 2px 0 0;
+        }
+      }
+    }
+  }
+
+  .sectionServices {
+    .catArrContainer {
+      position: absolute;
+      right: 0;
+      top: 8px;
+      font-size: 8px;
+      z-index: 2;
+
+      .spanArrow {
+        cursor: pointer;
+
+        &.prev {
+          margin-right: 18px;
+        }
+      }
+    }
+
+    .sliderCatContainer {
+      padding-left: 5vw;
+    }
+
+    .advantCategories {
+      width: 100%;
+      margin: 0 auto 35px;
+      //display: flex;
+      //flex-wrap: wrap;
+      //justify-content: center;
+      font-size: 36px;
+      line-height: 1;
+      font-weight: 400;
+      color: $gray2;
+
+      .catLinkSvc {
+        cursor: pointer;
+        flex: 0 0 auto;
+        width: max-content;
+        padding: 10px 3vw 10px 0;
+        display: inline-block;
+        @include transition();
+
+        &.active, &:hover {
+          color: $black;
+        }
+      }
+    }
+
+    .tns-nav {
+      position: absolute;
+      bottom: 35px;
+      left: 50.45%;
+      z-index: 2;
+      @include translateX(-50%);
+
+      button {
+        height: 14px;
+        width: 14px;
+        background: $gray;
+        border-radius: 50%;
+        padding: 0;
+        border: none;
+        margin: 0 6px;
+
+        &.tns-nav-active {
+          background: $gold;
+        }
+      }
+    }
+
+    .itemsContainer {
+
+      .itemBlock {
+        display: flex;
+        width: 100%;
+
+        .imageBlock {
+          width: 47%;
+
+          .itemSlider {
+            .slide {
+              padding-bottom: 29vw;
+            }
+          }
+        }
+
+        .descBlock {
+          width: 53%;
+          padding-left: 4vw;
+        }
+
+        .text {
+          h3 {
+            margin-bottom: 25px;
+            font-family: $mainFont;
+            font-size: 22px;
+            line-height: 1.1;
+            font-weight: bold;
+          }
+
+          p {
+            margin-bottom: 10vh;
+            font-family: $mainFont;
+            font-size: 22px;
+            font-weight: normal;
+            color: $darkText;
+          }
+
+          .btn {
+
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  &.rating-5 {
+    .sectionAdvantages {
+      .itemsContainer {
+        .itemBlock {
+          .image svg path {
+            fill: $gold;
+          }
+          .itemText .itemTitle {
+            color: $gold;
+          }
+        }
+      }
+    }
+    .sectionContacts {
+      #map {
+        .mapPlacemark {
+          background-color: $gold;
+        }
+      }
+    }
+  }
+
+  &.rating-4 {
+    .btn {
+      background-color: $cyan !important;
+
+      &.white {
+        background-color: $white !important;
+        color: $cyan !important;
+        border-color: $cyan !important;
+      }
+    }
+
+    .colorGold {
+      color: $cyan !important;
+    }
+
+    .sectionApartments {
+      .wrapper {
+        .itemsContainer {
+          .itemBlock {
+            .text {
+              ul {
+                color: $cyan;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sectionAdvantages {
+      .itemsContainer {
+        .itemBlock {
+          .image svg path {
+            fill: $cyan !important;
+          }
+          .itemText .itemTitle {
+            color: $cyan;
+          }
+        }
+      }
+    }
+
+    .sectionRestaurant {
+      .ico {
+        color: $cyan !important;
+      }
+    }
+
+    .sectionAwards {
+      .itemsContainer {
+        .itemBlock {
+          .image.nonImg {
+            //background: $cyan;
+            color: $cyan;
+          }
+        }
+      }
+    }
+
+    .sectionContacts {
+      .itemsContainer {
+        .itemBlock {
+          .accordeon {
+            border-color: $cyan !important;
+
+            li {
+              border-color: $cyan !important;
+
+              .spanIco {
+                color: $cyan !important;
+              }
+            }
+          }
+        }
+      }
+      #map {
+        .mapPlacemark {
+          background-color: $cyan;
+        }
+      }
+    }
+
+    .tns-nav-active {
+      background: $cyan !important;
+    }
+  }
+
+  &.rating-3 {
+    .btn {
+      background-color: $green !important;
+
+      &.white {
+        background-color: $white !important;
+        color: $green !important;
+        border-color: $green !important;
+      }
+    }
+
+    .colorGold {
+      color: $green !important;
+    }
+
+    .sectionApartments {
+      .wrapper {
+        .itemsContainer {
+          .itemBlock {
+            .text {
+              ul {
+                color: $green;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sectionAdvantages {
+      .itemsContainer {
+        .itemBlock {
+          .image svg path {
+            fill: $green !important;
+          }
+          .itemText .itemTitle {
+            color: $green;
+          }
+        }
+      }
+    }
+
+    .sectionRestaurant {
+      .ico {
+        color: $green !important;
+      }
+    }
+
+    .sectionAwards {
+      .itemsContainer {
+        .itemBlock {
+          .image.nonImg {
+            //background: $green;
+            color: $green;
+          }
+        }
+      }
+    }
+
+    .sectionContacts {
+      .itemsContainer {
+        .itemBlock {
+          .accordeon {
+            border-color: $green !important;
+
+            li {
+              border-color: $green !important;
+
+              .spanIco {
+                color: $green !important;
+              }
+            }
+          }
+        }
+      }
+      #map {
+        .mapPlacemark {
+          background-color: $green;
+        }
+      }
+    }
+
+    .tns-nav-active {
+      background: $green !important;
+    }
+  }
+
+}
+
+.linkToAll {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: -4px;
+  font-size: 22px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  .spanIco {
+    margin-right: 35px;
+    font-size: 7.5px;
+    color: $black;
+  }
+}
+
+@media (max-width: 1800px) {
+  .page-hotel {
+    .sectionRestaurant {
+      .sliderContainer {
+        .restaurantArrow {
+          top: 60%;
+        }
+        #restaurantSlider {
+          height: 56vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .page-hotel {
+    .sectionRestaurant {
+      .sliderContainer {
+        .restaurantArrow {
+          top: 57%;
+        }
+        #restaurantSlider {
+          height: 58vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .page-hotel {
+    .sectionRestaurant {
+      .sliderContainer {
+        .restaurantArrow {
+          top: 53%;
+        }
+        #restaurantSlider {
+          height: 61vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .page-hotel {
+    .sectionRestaurant {
+      .sliderContainer {
+        #restaurantSlider {
+          height: 64vw;
+          .slider {
+            .slideText {
+              .slideDesc {
+                display: none;
+              }
+            }
+          }
+        }
+
+        .restaurantArrow {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .linkToAll {
+    display: none;
+  }
+  .page-hotel {
+    .sectionTop {
+      .sliderContainer {
+        @include calc('height', '100vh - 60px')
+      }
+
+      .hotelText {
+        h3 {
+          font-size: 24px;
+        }
+
+        h1 {
+          font-size: 54px;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 1;
+        }
+      }
+
+      .custom-form {
+        .date-input, .guests-input, .form-submit, .btn {
+          width: 100%;
+        }
+      }
+    }
+
+    .sectionAttachments {
+      #attachSlider {
+        .slide {
+          height: 56vw;
+        }
+      }
+    }
+
+    .sectionAdventures {
+      .sliderContainer {
+        height: auto;
+      }
+    }
+
+    .sectionApartments {
+      .wrapper {
+        .itemsContainer {
+          .itemBlock {
+            &.imageBlock {
+              display: none;
+            }
+
+            &.descBlock {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .sectionRestaurant {
+      .sliderContainer {
+        #restaurantSlider {
+          height: auto;
+
+          .slider {
+            height: auto;
+
+            .bgImage {
+              position: relative;
+              height: 38vw;
+            }
+
+            .slideText {
+              padding-top: 50px;
+              position: relative;
+              left: 0;
+              top: 0;
+              width: 100%;
+              @include translate(0, 0);
+
+              .itemsContainer:last-child {
+                align-items: center;
+                flex-direction: column;
+
+                .itemBlock {
+                  margin-bottom: 20px;
+                }
+              }
+            }
+          }
+        }
+
+        .tns-nav {
+          bottom: auto;
+          top: 41vw;
+        }
+      }
+    }
+
+    .sectionRecreation {
+      .advantagesSlider {
+        height: auto;
+
+        .slide {
+          padding: 0;
+          height: auto;
+
+          .bgImage {
+            position: relative;
+            height: 38vw;
+          }
+
+          .slideText {
+            padding-top: 50px;
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 0;
+            width: 100%;
+            margin: 0 auto;
+            @include translate(0, 0);
+          }
+        }
+      }
+
+      .advantagesArrow {
+        top: 19vw;
+
+        &.prev {
+          left: 5%;
+          @include translateY(-50%);
+        }
+
+        &.next {
+          left: auto;
+          right: 5%;
+          @include translateY(-50%);
+        }
+      }
+    }
+
+    .sectionActivities {
+      padding: 40px 0;
+
+      .wrapper {
+        .itemsContainer {
+          flex-direction: column;
+          align-items: flex-start;
+          width: max-content;
+          margin: 0 auto;
+
+          .itemBlock {
+            margin-left: 0;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    .sectionTravel {
+      height: auto;
+
+      .sectionText {
+        position: relative;
+        left: 0;
+        top: 0;
+        padding: 7% 5% 20%;
+
+        h2 {
+          font-size: 36px;
+        }
+
+        p {
+          font-size: 26px;
+        }
+      }
+    }
+
+    .sectionContacts {
+      #map {
+        height: 50vh;
+      }
+
+      .itemsContainer {
+        .itemBlock {
+          width: 100%;
+        }
+      }
+    }
+
+    .sectionServices {
+      .itemsContainer {
+        .itemBlock {
+          flex-direction: column;
+
+          .imageBlock, .descBlock {
+            width: 100%;
+            padding: 0;
+          }
+
+          .imageBlock {
+            .itemSlider {
+              .slide {
+                padding-bottom: 55vw;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.rating-5 {
+      .sectionTop {
+        .custom-form {
+          background-color: $gold;
+        }
+      }
+    }
+
+    &.rating-4 {
+    }
+
+    &.rating-3 {
+    }
+
+    #adventures {
+      .wide-slide-container {
+        display: none;
+      }
+
+      .adv-slider-container {
+        display: none;
+        position: relative;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+
+        .slide {
+          padding-left: 20px;
+
+          .slideContent {
+            padding-bottom: 133%;
+          }
+        }
+
+        .adventuresSlider-controls {
+          top: 10px;
+          left: 50%;
+          flex-direction: row;
+          color: $black;
+
+          .adventuresArrow {
+            &.prev {
+              @include rotate(-90deg)
+            }
+
+            &.next {
+              @include rotate(90deg)
+            }
+          }
+
+          .roundBlock {
+            display: none;
+          }
+        }
+      }
+
+      .mobile-slider-container {
+        display: block;
+
+        .slide {
+          padding-left: 5vw;
+
+          .slideContent {
+            padding-bottom: 133%;
+          }
+        }
+      }
+
+      .tns-ovh {
+        overflow: visible;
+      }
+
+      .tns-outer {
+        height: 100%;
+
+        .slide {
+          @include translateY(0);
+
+          .slideContent {
+            display: block;
+          }
+
+          &.hided {
+            opacity: 1;
+            visibility: visible;
+          }
+
+        }
+      }
+    }
+  }
+  @media (orientation: landscape) {
+    .page-hotel {
+      .sectionTop {
+        .hotelText {
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .page-hotel {
+
+    .sectionTitle {
+      margin-top: 28px;
+    }
+
+    .sectionTop {
+      .hotelText {
+        p {
+          display: none;
+        }
+      }
+    }
+
+    .sectionDesc {
+      padding: 0 0 50px;
+
+      .wrapper.w820 p {
+        margin-bottom: 50px;
+      }
+
+      .breadCrumbs {
+
+        display: none;
+      }
+    }
+
+    .sectionApartments {
+      padding-bottom: 10px;
+
+      .sectionTitle {
+        margin-top: 50px;
+      }
+
+      .wrapper {
+        .itemsContainer {
+          padding-top: 0;
+
+          .itemBlock {
+            &.descBlock {
+              .text {
+                h3 {
+                  font-size: 30px;
+                }
+
+                p {
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sectionPromo {
+      padding: 10px 0 20px 0;
+      border-bottom: 1px solid $gray;
+    }
+
+    .sectionAdvantages {
+      .itemsContainer {
+        .itemBlock {
+          .image {
+            text-align: center;
+          }
+
+          .itemText {
+            text-align: center;
+
+            p {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .sectionRestaurant {
+      h2 {
+        margin-bottom: 30px;
+      }
+
+      .sliderContainer {
+        .tns-nav {
+          bottom: auto;
+          top: 60vw;
+        }
+
+        #restaurantSlider {
+          .slider {
+            @include translateX(0);
+
+            .bgImage {
+              padding: 0;
+              height: 54vw;
+            }
+
+            .slideText {
+              padding: 40px 5px 30px;
+
+              .itemsContainer {
+                align-items: center;
+                justify-content: center;
+                //flex-direction: column;
+                .itemBlock {
+                  margin-bottom: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sectionEvents {
+      .sectionTitle {
+        margin-bottom: 20px;
+      }
+
+      .itemsContainer .itemBlock {
+        padding: 0 5vw 0;
+      }
+    }
+
+    .sectionRecreation {
+      .wrapper.advantCat {
+        padding-bottom: 35px;
+      }
+
+      .advantagesSlider .slide .bgImage {
+        height: 35vh;
+      }
+
+      .advantCategories {
+        font-size: 30px;
+        width: 100%;
+        display: block;
+        margin: 0;
+
+        .catLink {
+          margin: 0;
+        }
+      }
+
+      .advantagesArrow {
+        top: 17.5vh;
+      }
+    }
+
+    .sectionServices {
+      .sliderCatContainer {
+        padding-bottom: 35px;
+      }
+
+      .advantCategories {
+        font-size: 30px;
+        display: block;
+        margin: 0;
+
+        .catLinkSvc {
+          margin: 0;
+          padding: 0;
+          width: auto;
+        }
+      }
+
+    }
+  }
+}

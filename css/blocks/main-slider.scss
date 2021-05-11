@@ -1,0 +1,94 @@
+.sectionHotels {
+  .sliderContainer {
+  z-index: 6;
+    #hotelsSlider {
+      .slide {
+
+        &.slideHide {
+          .bgImage {
+            visibility: hidden;
+            opacity: 0;
+          }
+          .slideText {
+            @include transition();
+            @include translateY(50px);
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+}
+#defaultBackgroundContainer{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index:4;
+  .defaultBackgroundWrapper{
+    position: absolute;
+    left: 45%;
+    width: 65vw * 0.33;
+    padding-right: 35px;
+    bottom: calc(20vh + 51px);
+    transform: scale(5.2);
+    transform-origin: center center;
+    .defaultBackground{
+      @include bg-cover();
+      display: block;
+      width: 100%;
+      padding-bottom: 133%;
+    }
+  }
+}
+
+#backgroundsContainer{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index:5;
+  .dynamicBackgroundWrapper{
+    position: absolute;
+    left: 45%;
+    width: 65vw * 0.33;
+    padding-right: 35px;
+    bottom: calc(20vh + 51px);
+    transform: scale(1);
+    transform-origin: center center;
+    @include transition();
+    &.active{
+      transform: scale(5.2);
+    }
+    .dynamicBackground{
+      @include bg-cover();
+      display: block;
+      width: 100%;
+      padding-bottom: 133%;
+      visibility: hidden;
+      opacity: 0;
+      &.showed{
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  .dynamicTexts{
+    position: absolute;
+    left: 5vw;
+    bottom: 40vh;
+    width: 30vw;
+    @include transition();
+    @include translateY(50px);
+    opacity: 0;
+    visibility: hidden;
+    &.active {
+      @include translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

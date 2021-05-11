@@ -1,0 +1,139 @@
+.hotelNav, #mainNav{
+
+  .navMenu{
+    margin:0;
+  }
+
+  .topMenuContainer{
+    flex-grow: 1;
+    display: flex;
+    justify-content:center;
+  }
+
+  &.filled{
+    .logo{
+      img {
+        height: 32px;
+      }
+      p{
+        font-size: 0.7em;
+      }
+    }
+    .language-choosing{
+      display:none;
+    }
+    .reserve.btn{
+      display:inline-block;
+    }
+  }
+}
+.reserve.btn{
+  display:none;
+  &:hover,&:focus{
+    outline: none;
+  }
+}
+.reserve{
+  font-family: $mainFont;
+  font-size: 18px;
+  padding: 15px;
+  line-height: 1;
+
+}
+.btnCircled{
+  width: 42px;
+  height: 42px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border:1px solid rgba($black, 0.8);
+  padding: 8px;
+  cursor: pointer;
+  img{
+    height: 24px;
+  }
+}
+.mainNavMobileSpacer{
+  flex-grow:1;
+}
+
+.btn.btnLink{
+  margin:35px 0;
+  display:inline-flex;
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  line-height: 1.4;
+  color: $black;
+  .spanIco {
+    margin-right: 25px;
+    font-size: 7.5px;
+  }
+}
+#contacts{
+  ul{
+    padding: 0;
+    margin: 0;
+  }
+}
+.page-hotel .sectionApartments .wrapper .itemsContainer .itemBlock .text{
+  width: 100%;
+}
+#apartmentsSlider{
+  width: 100%;
+  display: block;
+  list-style:none;
+  padding: 0;
+  margin: 0;
+  li{
+    height: 60vh;
+    display:inline-block;
+    a{
+      width: 100%;
+      height: 100%;
+      align-items: flex-end;
+      padding:20px;
+      .bgImage{
+        top: 0;
+        left: 0;
+      }
+      .slideInfo{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        color:$white;
+        width: 100%;
+        padding-bottom: 0;
+        border-bottom:1px solid $gray2;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px){
+  .hotelNav, #mainNav{
+    &.filled{
+      #menu{
+        .menuRoundBlock{
+          border:1px solid rgba($black, 0.8);
+        }
+        #burger span{
+          background-color: $black;
+        }
+      }
+      .reserve{
+        display: flex;
+      }
+    }
+  }
+  .reserve{
+    display:none;
+    padding: 8px;
+  }
+}
+
+

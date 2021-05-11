@@ -1,0 +1,170 @@
+@import "circe";
+@import "mixins/ico";
+@import "mixins/variables";
+@import "mixins/mixins";
+@import "mixins/normalize";
+@import "mixins/default";
+@import "tiny-slider";
+
+#adventures {
+
+  .wide-slide-container {
+    height: 56vw;
+    overflow: hidden;
+
+    .b-slide {
+      position: absolute;
+      transform-origin: 50% 50%;
+      opacity: 0;
+      visibility: hidden;
+      .bgImage {
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background-color: $black;
+          opacity: 0.3;
+        }
+      }
+
+
+      &.active {
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+        @include transition;
+
+        .text {
+          @include transition;
+
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+          visibility: hidden;
+          background-color: rgba($black, 0.8);
+          @include transition;
+        }
+      }
+      &.active.active_out {
+        @include scale(1.5);
+        &:after {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &.ani_ready {
+        @include transition;
+      }
+
+      &.next {
+        top: 40px;
+        right: 5vw;
+        width: 23.9vw;
+        height: 14.8vw;
+        opacity: 1;
+        visibility: visible;
+        z-index: 20;
+
+        .wrapper {
+          width: 100%;
+        }
+
+        .text {
+          position: absolute;
+          left: 20px;
+          bottom: 20px;
+          @include translate(0, 0);
+          width: 100%;
+          top: auto;
+
+          h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+
+          }
+
+          p {
+            display: none;
+          }
+          a {
+            display: none;
+          }
+        }
+
+      }
+      &.next.active {
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+
+        .text {
+          opacity: 0;
+          visibility: hidden;
+          width: 33%;
+
+        }
+
+      }
+    }
+  }
+
+
+  .adv-slider-container {
+    position: absolute;
+    top: 0;
+    right: 5vw;
+    bottom: 0;
+    width: 24%;
+    z-index: 100;
+
+    .adventuresSlider-controls {
+      width: auto;
+      height: auto;
+      right: 100%;
+
+      &.in_process {
+        pointer-events: none;
+      }
+    }
+  }
+  .tns-outer {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+
+    .slide {
+      @include translateY(-100%);
+
+      .slideContent {
+        display: block;
+      }
+
+      &.hided {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+    }
+  }
+
+
+}
+

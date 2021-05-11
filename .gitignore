@@ -1,0 +1,13 @@
+/index.php
+/index-test.php
+/backend/tests/
+/backend/codeception.yml
+/common/tests/
+/common/codeception.yml
+/files/
+/vendor/
+/cosomos.zip
+/codeception.yml
+/frontend/tests/
+/frontend/codeception.yml
+/.idea/

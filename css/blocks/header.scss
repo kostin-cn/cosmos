@@ -1,0 +1,874 @@
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: normal;
+  line-height: 1.4;
+  letter-spacing: 0.35em;
+  @include transition();
+  img {
+    display: block;
+    width: auto;
+    height: 40px;
+    @include transition();
+  }
+  .logo-fill {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    @include translateX(-50%);
+    opacity: 0;
+    z-index: 2;
+  }
+  p {
+    margin: 10px 0 0;
+  }
+}
+
+.language-choosing {
+  a {
+    display: block;
+    font-weight: normal;
+    border-bottom: 1px solid $white;
+    @include transition();
+    &.active {
+      display: none !important;
+    }
+  }
+}
+
+.navMenu {
+  li {
+    width: max-content;
+    a {
+      display: inline-block;
+      overflow: hidden;
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $black;
+        @include transition();
+        @include translateX(-101%);
+      }
+      &:hover {
+        &:after {
+          @include translateX(0);
+        }
+      }
+    }
+    &.nonAfter {
+      cursor: pointer;
+      a:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.dropdownNav {
+  .topMenuContainer {
+    padding: 0 5vw;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 52px;
+    max-height: 0;
+    text-align: center;
+    overflow: hidden;
+    background-color: $white;
+    color: $black;
+    @include transition();
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.4;
+    ul {
+      padding: 15px 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      li {
+        display: flex;
+        align-items: center;
+        margin: 5px 1vw;
+        .spanIco {
+          transform: rotateX(0) !important;
+        }
+        &.active {
+          display: none;
+        }
+        &.clicked {
+          .spanIco {
+            transform: rotateX(180deg) !important;
+          }
+        }
+      }
+    }
+  }
+  .divider {
+    background-color: $black;
+  }
+  &.active {
+    .spanIco {
+      transform: translate3d(0, -3px, 0) rotateX(180deg) !important;
+    }
+    .topMenuContainer {
+      max-height: 500px;
+    }
+  }
+}
+
+#mainNav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 200;
+  padding: 20px 0 20px;
+  @include transition(0.3s);
+
+  &.filled, &.drop-active {
+    background-color: $white;
+    .logo {
+      color: $gray3;
+      .imgLogo {
+        opacity: 0;
+      }
+      .logo-fill {
+        opacity: 1;
+      }
+    }
+    .language-choosing {
+      a {
+        color: $black;
+        border-color: $black;
+      }
+    }
+    .divider {
+      background-color: $black;
+    }
+    #menu {
+      .navMenu {
+        color: $black;
+        li {
+          a:after {
+            background-color: $black;
+          }
+          ul {
+            background-color: $white;
+          }
+        }
+      }
+      .menuRoundBlock {
+        border-color: rgba(0, 0, 0, 0.3);
+      }
+      #burger {
+        span {
+          background-color: $gray4;
+        }
+      }
+      .userBtn {
+        border-color: $gray4;
+      }
+    }
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 1em;
+  margin: auto 1vw;
+  background-color: $white;
+  @include transition();
+}
+
+.menuRoundBlock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 150px;
+  margin-left: 23px;
+  padding: 8px;
+  @include transition();
+}
+
+#menu {
+  color: $white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  @include transition();
+
+  .topMenuContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.4;
+  }
+
+  .menuRightBlock {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  #burger {
+    display: inline-block;
+    width: 18px;
+    height: 12px;
+    margin-right: 10px;
+    cursor: pointer;
+    span {
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      position: absolute;
+      left: 0;
+      @include transition();
+      &.top {
+        top: 0;
+      }
+      &.bottom {
+        bottom: 0;
+      }
+    }
+    &.active {
+      span {
+        &.top {
+          top: 5px;
+          @include rotate(135deg);
+        }
+        &.bottom {
+          bottom: 5px;
+          @include rotate(-135deg);
+        }
+      }
+    }
+  }
+  .userBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    background-color: $white;
+    border: 1px solid $white;
+    border-radius: 50%;
+    color: $gray2;
+    font-size: 14px;
+    @include transition();
+  }
+  .navMenu {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    li {
+      display: flex;
+      align-items: center;
+      margin: 5px 1vw;
+      a:after {
+        background-color: $white;
+      }
+      ul {
+        position: absolute;
+        left: -1vw;
+        top: 100%;
+        overflow: hidden;
+        max-height: 0;
+        @include transition();
+      }
+      &.clicked {
+        .spanIco {
+          @include rotateX(180deg);
+        }
+      }
+    }
+  }
+  .spanIco {
+    display: inline-block;
+    font-size: 4px;
+    margin-left: 18px;
+    @include transition();
+    //@include translateY(-3px);
+  }
+}
+
+.hotelNav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 200;
+  @include transition();
+  display: none;
+
+  &.filled {
+    background-color: $white;
+    .logo {
+      color: $gray3;
+      .imgLogo {
+        opacity: 0;
+      }
+      .logo-fill {
+        opacity: 1;
+      }
+    }
+    #menu {
+      .language-choosing {
+        display: none !important;
+      }
+      .navMenu {
+        color: $black;
+        li {
+          a:after {
+            background-color: $black;
+          }
+          ul {
+            background-color: $white;
+          }
+        }
+      }
+      .menuRoundBlock {
+        border-color: rgba(0, 0, 0, 0.3);
+      }
+      #burger {
+        span {
+          background-color: $gray4;
+        }
+      }
+      .userBtn {
+        border-color: $gray4;
+      }
+    }
+
+    .navTop {
+      margin-top: -52px;
+    }
+  }
+  &.drop-active {
+    .navTop {
+      background-color: $white;
+      color: $black;
+    }
+    .divider {
+      background-color: $black;
+    }
+    .language-choosing {
+      a {
+        border-color: $black;
+      }
+    }
+  }
+
+  .logo {
+    img {
+      height: 38px;
+    }
+    p {
+      margin-top: 8px;
+    }
+  }
+
+  #menu {
+    padding: 20px 0;
+    opacity: 1;
+    .language-choosing {
+      display: none;
+    }
+  }
+
+  .navTop {
+    padding: 14px 0;
+    color: $white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    text-transform: capitalize;
+    z-index: 100;
+    @include transition();
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .leftNav, .rightNav {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .spanIco {
+      display: inline-block;
+      font-size: 4px;
+      margin-left: 7px;
+      @include transition();
+      @include translateY(-3px);
+    }
+    .current {
+      cursor: pointer;
+    }
+
+    .socialsContainer {
+      font-size: 17px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      .soc {
+        margin-left: 7px;
+        display: inline-flex;
+      }
+    }
+    .language-choosing {
+      margin-left: 18px;
+    }
+    &.active {
+      background-color: $white;
+      color: $black;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+      .divider {
+        background-color: $black;
+      }
+      .language-choosing {
+        a {
+          border-color: $black;
+        }
+      }
+    }
+  }
+
+  .divider {
+    width: 1px;
+    height: 1em;
+    margin: auto 1vw;
+    background-color: $white;
+    @include transition();
+  }
+}
+
+#hotelsDropMenu {
+  padding-top: 119px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  @include transition();
+  @include translateY(-120%);
+  z-index:3;
+  background: $white;
+  &.active {
+    @include translateY(0);
+  }
+  #hotelFilters {
+    border-top: 1px solid rgba(153, 153, 153, 0.25);
+    .form-group {
+      display: flex;
+      margin-bottom: 0;
+      .form-control {
+        height: auto;
+        width: auto;
+        padding: 0 20px;
+        margin: 20px 0;
+        border: none;
+        box-shadow: none;
+        border-right: 1px solid $gray2;
+        border-radius: 0;
+        &:last-child {
+          border-right: none;
+        }
+        span {
+          font-size: 25px;
+          color: $gray2;
+          cursor: pointer;
+        }
+      }
+      label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        font-size: 18px;
+        font-weight: 700;
+        color: $black;
+      }
+      input {
+        display: none;
+      }
+      input:checked + label {
+        span {color: $gold}
+      }
+    }
+    .border-block {
+      border-top: 1px solid rgba(153, 153, 153, 0.25);
+    }
+  }
+
+  .itemsContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 600px;
+    padding: 20px 0;
+    .itemBlock {
+      margin-bottom: 10px;
+      p {
+        margin-bottom: 10px;
+        font-size: 22px;
+        line-height: 1.2;
+        font-weight: 400;
+        a {
+          @include transition(0.3s);
+          &:hover {
+            color: $gold;
+          }
+        }
+      }
+      .btn {
+        float: right;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: max-content;
+        padding: 15px 20px;
+        .spanIco {
+          font-size: 8.5px;
+          margin-right: 30px;
+        }
+        span {
+          font-size: 22px;
+        }
+      }
+      &:last-child {
+        position: absolute;
+        right: 0;
+        bottom: 20px;
+      }
+    }
+  }
+}
+
+.page-hotel {
+  #mobMenu {
+    .logo {
+      //width: 118px;
+      img {
+        height: 32px;
+      }
+      p{
+        font-size: 0.7em;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+#mobMenu {
+  display: none;
+
+  padding: 115px 0 0;
+  font-size: 18px;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 500;
+  background-color: $white;
+  color: $black;
+  @include transition();
+  @include translateY(-120%);
+  &.active {
+    @include translateY(0);
+  }
+
+  .blkTop {
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .blkCntnt {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .cntntWrap {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    ul {
+      list-style: none;
+      li {
+
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid $gray;
+        @include transition();
+        a, .blockA, .blockB {
+          display: block;
+          padding: 20px 25px;
+        }
+        .blockA {
+          border-bottom: 1px solid transparent;
+        }
+        .blockB {
+          background-color: $gray5;
+          border-bottom: 1px solid transparent;
+        }
+        .spanIco {
+          font-size: 4px;
+          position: absolute;
+          top: 28px;
+          right: 18px;
+          @include transition();
+        }
+        &.mobDropMenu {
+          overflow: hidden;
+          max-height: 66px;
+          .spanIco {
+            @include rotateX(0);
+          }
+          &.active {
+            max-height: 1000px;
+            .blockA {
+              border-color: $gray;
+              .spanIco {
+                @include rotateX(180deg);
+              }
+            }
+          }
+        }
+        &.mobSubDropMenu {
+          overflow: hidden;
+          max-height: 66px;
+          .spanIco {
+            @include rotateX(0);
+          }
+          &.clicked {
+            max-height: 1000px;
+            .blockB {
+              border-color: $gray;
+              .spanIco {
+                @include rotateX(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .blkBottom {
+    //position: absolute;
+    //bottom: 0;
+    //left: 0;
+    //right: 0;
+    padding-top: 20px;
+    text-align: center;
+
+    .homeLink {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    .spanIco {
+      font-size: 8px;
+      margin-right: 13px;
+    }
+  }
+
+  .language-choosing {
+    a {
+      font-size: 16px;
+      border-color: $black;
+      display: inline-block;
+    }
+  }
+
+  .socialsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+    .soc {
+      font-size: 41px;
+      line-height: 1;
+      margin-left: 16px;
+      opacity: 0.4;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .topRightBlk {
+    display: flex;
+  }
+
+  .menuRoundBlock {
+    margin-left: 11px;
+    border-color: $black;
+    flex: 0 0 auto;
+    &.closeBtnBlk {
+      width: 43px;
+      height: 43px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  #brgr {
+    display: inline-block;
+    width: 18px;
+    height: 12px;
+    cursor: pointer;
+    span {
+      width: 100%;
+      height: 2px;
+      background-color: $black;
+      position: absolute;
+      left: 0;
+      @include transition();
+      &.top {
+        top: 0;
+      }
+      &.bottom {
+        bottom: 0;
+      }
+    }
+    &.active {
+      span {
+        &.top {
+          top: 5px;
+          @include rotate(135deg);
+        }
+        &.bottom {
+          bottom: 5px;
+          @include rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  .userBtn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .spanIco {
+      margin-top: 2px;
+      margin-right: 7px;
+    }
+  }
+
+
+}
+
+@media (max-width: 1400px) {
+  #hotelsDropMenu {
+    .itemsContainer {
+      height: 500px;
+      .itemBlock {
+        p {
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+        .white-gray {
+          padding: 10px;
+          .spanIco {
+            margin-right: 15px;
+          }
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #menu {
+    #burger {
+      margin: 0;
+    }
+    .userBtn {
+      display: none;
+    }
+    .menuRoundBlock {
+      width: 42px;
+      height: 42px;
+      justify-content: center;
+      border-radius: 50%;
+    }
+    .topMenuContainer {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: -120%;
+    }
+  }
+  #mobMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 960px) {
+  .hotelNav {
+    .navTop {
+      display: none;
+    }
+    #menu {
+      .language-choosing {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .hotelNav {
+    #menu {
+      .language-choosing {
+        display: block;
+      }
+    }
+  }
+}

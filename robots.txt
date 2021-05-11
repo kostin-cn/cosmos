@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /common/
+Disallow: /vendor/
+Disallow: /frontend/
