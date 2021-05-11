@@ -212,7 +212,8 @@
               font-family: $mainFont;
               font-size: 22px;
               font-weight: 400;
-              color: $darkText;
+              //color: $darkText;
+              color: $black;
             }
 
             ul {
@@ -433,7 +434,8 @@
               font-size: 22px;
               line-height: 1.4;
               font-weight: 400;
-              color: $darkText;
+              //color: $darkText;
+              color: $black;
               margin-bottom: 15px;
             }
 
@@ -446,10 +448,12 @@
               font-size: 18px;
               line-height: 1.5;
               font-weight: 700;
-              color: $darkText;
+              //color: $darkText;
+              color: $black;
 
               &:before {
-                background-color: $darkText;
+                //background-color: $darkText;
+                background-color: $black;
               }
             }
 
@@ -471,7 +475,8 @@
                 }
 
                 p {
-                  color: $darkText;
+                  //color: $darkText;
+                  color: $black;
                   margin-bottom: 15px;
                 }
 
@@ -557,10 +562,12 @@
           .read-more {
             font-size: 18px;
             line-height: 1.3;
-            color: $darkText;
+            //color: $darkText;
+            color: $black;
 
             &:before {
-              background-color: $darkText;
+              //background-color: $darkText;
+              background-color: $black;
             }
           }
         }
@@ -583,7 +590,8 @@
           font-size: 22px;
           line-height: 1.4;
           font-weight: 400;
-          color: $darkText;
+          //color: $darkText;
+          color: $black;
         }
       }
     }
@@ -635,11 +643,11 @@
 
           p {
             margin-bottom: 25px;
-            font-size: $mainFont;
             font-size: 22px;
             line-height: 1.3;
             font-weight: 400;
-            color: $darkText;
+            //color: $darkText;
+            color: $black;
 
             strong {
               font-weight: 700;
@@ -650,10 +658,12 @@
             font-size: 18px;
             line-height: 1.6;
             font-weight: 700;
-            color: $darkText;
+            //color: $darkText;
+            color: $black;
 
             &:before {
-              background-color: $darkText;
+              //background-color: $darkText;
+              background-color: $black;
             }
           }
         }
@@ -699,7 +709,8 @@
       p {
         margin-bottom: 60px;
         font-size: 22px;
-        color: $darkText;
+        //color: $darkText;
+        color: $black;
       }
 
       .itemsContainer {
@@ -846,7 +857,8 @@
           padding: 0 5%;
           //padding-right: 10%;
           font-size: 22px;
-          color: $darkText;
+          //color: $darkText;
+          color: $black;
 
           .itemTitle {
             font-weight: 700;
@@ -870,7 +882,8 @@
         p {
           margin-bottom: 60px;
           font-size: 22px;
-          color: $darkText;
+          //color: $darkText;
+          color: $black;
         }
       }
     }
@@ -919,7 +932,8 @@
               p {
                 padding-right: 5%;
                 font-size: 22px;
-                color: $darkText;
+                //color: $darkText;
+                color: $black;
                 margin: 0;
 
                 &.stronk {
@@ -1091,7 +1105,8 @@
             font-family: $mainFont;
             font-size: 22px;
             font-weight: normal;
-            color: $darkText;
+            //color: $darkText;
+            color: $black;
           }
 
           .btn {

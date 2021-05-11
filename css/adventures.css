@@ -816,7 +816,7 @@ h2 {
   height: auto;
   padding: 20px 40px;
   background-color: #FFFFFF;
-  color: #282E43;
+  color: #000000;
   border: none;
   border-radius: 0;
   font-size: 22px;
@@ -830,7 +830,7 @@ h2 {
   top: 50%;
   z-index: 2;
   font-size: 4px;
-  color: #282E43;
+  color: #000000;
 }
 .custom-form .form-group select::-ms-expand {
   display: none;

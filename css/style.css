@@ -816,7 +816,7 @@ h2 {
   height: auto;
   padding: 20px 40px;
   background-color: #FFFFFF;
-  color: #282E43;
+  color: #000000;
   border: none;
   border-radius: 0;
   font-size: 22px;
@@ -830,7 +830,7 @@ h2 {
   top: 50%;
   z-index: 2;
   font-size: 4px;
-  color: #282E43;
+  color: #000000;
 }
 .custom-form .form-group select::-ms-expand {
   display: none;
@@ -3196,7 +3196,7 @@ h2 {
   font-family: "Circe", sans-serif;
   font-size: 22px;
   font-weight: 400;
-  color: #282E43;
+  color: #000000;
 }
 .page-hotel .sectionApartments .wrapper .itemsContainer .itemBlock .text ul {
   font-family: "Circe", sans-serif;
@@ -3383,7 +3383,7 @@ h2 {
   font-size: 22px;
   line-height: 1.4;
   font-weight: 400;
-  color: #282E43;
+  color: #000000;
   margin-bottom: 15px;
 }
 .page-hotel .sectionRestaurant .sliderContainer #restaurantSlider .slider .slideText .slideDesc {
@@ -3394,10 +3394,10 @@ h2 {
   font-size: 18px;
   line-height: 1.5;
   font-weight: 700;
-  color: #282E43;
+  color: #000000;
 }
 .page-hotel .sectionRestaurant .sliderContainer #restaurantSlider .slider .slideText .read-more:before {
-  background-color: #282E43;
+  background-color: #000000;
 }
 .page-hotel .sectionRestaurant .sliderContainer #restaurantSlider .slider .slideText .itemsContainer {
   display: flex;
@@ -3416,7 +3416,7 @@ h2 {
   color: #A18474;
 }
 .page-hotel .sectionRestaurant .sliderContainer #restaurantSlider .slider .slideText .itemsContainer .itemBlock p {
-  color: #282E43;
+  color: #000000;
   margin-bottom: 15px;
 }
 .page-hotel .sectionRestaurant .sliderContainer #restaurantSlider .slider .slideText .itemsContainer .itemBlock a {
@@ -3481,10 +3481,10 @@ h2 {
 .page-hotel .sectionEvents .itemsContainer .itemBlock .itemText .read-more {
   font-size: 18px;
   line-height: 1.3;
-  color: #282E43;
+  color: #000000;
 }
 .page-hotel .sectionEvents .itemsContainer .itemBlock .itemText .read-more:before {
-  background-color: #282E43;
+  background-color: #000000;
 }
 .page-hotel .sectionRecreation {
   overflow: hidden;
@@ -3499,7 +3499,7 @@ h2 {
   font-size: 22px;
   line-height: 1.4;
   font-weight: 400;
-  color: #282E43;
+  color: #000000;
 }
 .page-hotel .sectionRecreation .advantCategories {
   width: 90%;
@@ -3546,11 +3546,10 @@ h2 {
 }
 .page-hotel .sectionRecreation .advantagesSlider .slide .slideText p {
   margin-bottom: 25px;
-  font-size: "Circe", sans-serif;
   font-size: 22px;
   line-height: 1.3;
   font-weight: 400;
-  color: #282E43;
+  color: #000000;
 }
 .page-hotel .sectionRecreation .advantagesSlider .slide .slideText p strong {
   font-weight: 700;
@@ -3559,10 +3558,10 @@ h2 {
   font-size: 18px;
   line-height: 1.6;
   font-weight: 700;
-  color: #282E43;
+  color: #000000;
 }
 .page-hotel .sectionRecreation .advantagesSlider .slide .slideText .read-more:before {
-  background-color: #282E43;
+  background-color: #000000;
 }
 .page-hotel .sectionRecreation .advantagesArrow {
   display: flex;
@@ -3598,7 +3597,7 @@ h2 {
 .page-hotel .sectionActivities .wrapper p {
   margin-bottom: 60px;
   font-size: 22px;
-  color: #282E43;
+  color: #000000;
 }
 .page-hotel .sectionActivities .wrapper .itemsContainer {
   display: flex;
@@ -3713,7 +3712,7 @@ h2 {
 .page-hotel .sectionAwards .itemsContainer .itemBlock .itemText {
   padding: 0 5%;
   font-size: 22px;
-  color: #282E43;
+  color: #000000;
 }
 .page-hotel .sectionAwards .itemsContainer .itemBlock .itemText .itemTitle {
   font-weight: 700;
@@ -3728,7 +3727,7 @@ h2 {
 .page-hotel .sectionContacts .wrapper.w620 p {
   margin-bottom: 60px;
   font-size: 22px;
-  color: #282E43;
+  color: #000000;
 }
 .page-hotel .sectionContacts .itemsContainer {
   justify-content: space-between;
@@ -3777,7 +3776,7 @@ h2 {
 .page-hotel .sectionContacts .itemsContainer .itemBlock .accordeon li .liBody p {
   padding-right: 5%;
   font-size: 22px;
-  color: #282E43;
+  color: #000000;
   margin: 0;
 }
 .page-hotel .sectionContacts .itemsContainer .itemBlock .accordeon li .liBody p.stronk {
@@ -3905,7 +3904,7 @@ h2 {
   font-family: "Circe", sans-serif;
   font-size: 22px;
   font-weight: normal;
-  color: #282E43;
+  color: #000000;
 }
 .page-hotel .sectionServices .itemsContainer .itemBlock .text .btn {
   width: 200px;
